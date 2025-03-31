@@ -21,8 +21,8 @@
     <p>Our analysis makes use of a dataset called "shopping-trends.csv", which contains the following attributes 
         across all 50 states. The data originally has 3900 rows with 19 columns. In order to conduct analysis on 
         the data, we cleaned and added 3 columns to highlight certain information. This included creating "Region",
-        "Age Group", and "Winter Items" columns. The detailed information about the features are listed in the 
-        following table:</p>
+        "Age Group", and "Winter Items" columns. The starred (*) attributes indicate data that was derived from 
+        existing columns. The detailed information about the features are listed in the following table:</p>
 
         <div class="center">
             <table class="tg">
@@ -110,23 +110,43 @@
                     <td class="tg-0lax">How often the customer places orders</td>
                   </tr>
                   <tr>
-                    <td class="tg-0lax">Region</td>
+                    <td class="tg-0lax">Region*</td>
                     <td class="tg-0lax">Grouped into 4 main regions of the US based on the "Location" column</td>
                   </tr>
                   <tr>
-                    <td class="tg-0lax">Age Group</td>
+                    <td class="tg-0lax">Age Group*</td>
                     <td class="tg-0lax">Grouped into 3 main generations from the "Age" column</td>
                   </tr>
                   <tr>
-                    <td class="tg-0lax">Winter Items</td>
+                    <td class="tg-0lax">Winter Items*</td>
                     <td class="tg-0lax">Identies if the item is a winter item or not based on the "Item Purchased" column</td>
                   </tr>
                 </tbody>
                 </table>
             </div>
+
+    <h3>Map Showing Which Age Group Spends the Most Per State</h3>
+        
+    <div class = 'center'>
+        <iframe src="purchases_per_state.html" width="80%" height="400px" frameborder="0"></iframe>
+    </div>
+    
+    <p>
+        <br> The map above shows the total amount spent per state. The lighter the color, the more 
+        shopping occurs in that state compared to others. The map is interactive, so you can hover over each state to 
+        see more information. When you hover over the box, the "Age Group" shown is the generation that spends the most
+        in that state. A quick look at the graph shows that Montana is the lightest colored state, and therefore,
+        has the highest spending at $5,784 and Boomers (ages 44+) are the highest spenders by age, spending 56.45% of the
+        entire state's purchases. Kansas is the state with the lowest spending at only $3,437, with Boomers once again
+        spending the most at 48.3%. The states with the largest cities (i.e. Chicago, New York, Los Angeles) are more lightly
+        colored, so there could be a possible correlation between large cities and higher population and it's effect on 
+        overall state spending. 
+    </p>
     
 
     <h3>Summary and Future Additions</h3>
+    <p>[AJ thoughts - maybe something about comparing population to spending or states with large cities
+        or unemployment levels to spending (ex if more unemployed then maybe less spending)]</p>
         
 </body>
 
