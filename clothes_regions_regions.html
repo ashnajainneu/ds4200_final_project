@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a237356bec8012aad60f9cde8f51d7e4"}, "mark": {"type": "bar"}, "encoding": {"color": {"condition": {"param": "param_4", "field": "Season", "scale": {"domain": ["Winter", "Spring", "Summer", "Fall"], "range": ["lightpink", "orange", "lightgreen", "skyblue"]}, "type": "nominal"}, "value": "lightgray"}, "tooltip": [{"field": "Region", "type": "nominal"}, {"field": "Season", "type": "nominal"}, {"field": "Number of Winter Items Purchased", "type": "quantitative"}], "x": {"field": "Region", "title": "Region", "type": "nominal"}, "y": {"field": "Number of Winter Items Purchased", "title": "Number of Winter Items Purchased", "type": "quantitative"}}, "height": 400, "params": [{"name": "param_4", "select": {"type": "point", "fields": ["Season"]}, "bind": {"input": "select", "options": [null, "Fall", "Spring", "Summer", "Winter"], "labels": ["All", "Fall", "Spring", "Summer", "Winter"], "name": "Season: "}}], "title": "Number of Winter Clothes Purchased Across Different Regions and Seasons", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-a237356bec8012aad60f9cde8f51d7e4": [{"Region": "Northeast", "Season": "Fall", "Number of Winter Items Purchased": 58}, {"Region": "Northeast", "Season": "Spring", "Number of Winter Items Purchased": 57}, {"Region": "Northeast", "Season": "Summer", "Number of Winter Items Purchased": 50}, {"Region": "Northeast", "Season": "Winter", "Number of Winter Items Purchased": 54}, {"Region": "Northwest", "Season": "Fall", "Number of Winter Items Purchased": 83}, {"Region": "Northwest", "Season": "Spring", "Number of Winter Items Purchased": 99}, {"Region": "Northwest", "Season": "Summer", "Number of Winter Items Purchased": 92}, {"Region": "Northwest", "Season": "Winter", "Number of Winter Items Purchased": 87}, {"Region": "Southeast", "Season": "Fall", "Number of Winter Items Purchased": 82}, {"Region": "Southeast", "Season": "Spring", "Number of Winter Items Purchased": 98}, {"Region": "Southeast", "Season": "Summer", "Number of Winter Items Purchased": 59}, {"Region": "Southeast", "Season": "Winter", "Number of Winter Items Purchased": 76}, {"Region": "Southwest", "Season": "Fall", "Number of Winter Items Purchased": 55}, {"Region": "Southwest", "Season": "Spring", "Number of Winter Items Purchased": 38}, {"Region": "Southwest", "Season": "Summer", "Number of Winter Items Purchased": 43}, {"Region": "Southwest", "Season": "Winter", "Number of Winter Items Purchased": 49}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
