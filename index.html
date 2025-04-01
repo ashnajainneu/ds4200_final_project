@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unemployment rate study</title>
     <link href="style.css" rel="stylesheet" />
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="d3_graph.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .chart-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .chart-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #chart3 {
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
@@ -14,7 +41,10 @@
 
     <h3> Project Introduction </h3>
 
-    <p>[Intro goes here + links to references]</p>
+    <p>Spending is an essential part of everyone’s daily lives, whether the purchases include groceries, home supplies, clothing, beauty, leisure, or other products. Although everyone has various habits, understanding not just our own personal spending but also the tendencies of online consumer behavior can help us better understand our financial tendencies, the changing shopping industry, and generational trends (Gen Z vs. Millennials vs. Boomers).</p>
+    <p>According to a <a href="https://www.mckinsey.com/~/media/mckinsey/email/genz/2024/02/2024-02-27d.html">McKinsey & Company</a> article, Gen Z unit sales are “two times the rate of other generations,” demonstrating more frequent shopping, a continual point of opportunity for companies, but a sign that certain age groups may need better understanding of their personal finances. 
+      As we are all considered Gen Z, their <a href="https://onesearch.library.northeastern.edu/permalink/01NEU_INST/87npqb/cdi_proquest_journals_3118582627">decision-making style</a> was another point of curiosity to understand shopping behaviors between various generations.
+      Through a data science project focusing on consumer behavior, e-commerce, and shopping habits, our group can use exploratory data analysis to evaluate various hypotheses related to this topic.</p>
 
     <h3>Data Introduction</h3>
 
@@ -125,6 +155,24 @@
                 </table>
             </div>
 
+    <h3>Generations' Shopping Volume Through Seasons</h3>
+    <div class="chart-container">
+              <div class="chart-title">Chart of Shopping Volume by Generation Across Seasons</div>
+              <div id="chart3"></div>
+    </div>
+
+    <p>From the line chart, it seems that millennial and boomers purchase a higher total amount than Gen Z in this dataset through the seasons. With a comparison of purchase amount overtime through the different seasons, we can observe the changes in purchasing for each generation (Gen Z, millennial and boomer) as well as overtime. </p>
+    <p>As this chart also features an interactive component, the user can click on a particular line (generation) that they want to focus on, that particular one will thicken for visual emphasis, and the other lines will grey out.</p>
+    <p>As many assume that certain seasons will have large influxes of purchasing, the trend from this data of purchasing amount seems to be relatively stable. Additionally, there does not seem to be any outliers or significant spikes. Gen Z may purchase at a much lower amount in this chart due to the likelihood of less disposable income to spend being at the early years of their adulthood. </p>
+
+
+    <h3>Payments by Age Group</h3>
+    <div class = 'center'>
+      <iframe src="payment_methods_by_age.html" width="80%" height="400px" frameborder="0"></iframe>
+  </div>
+  <p>This bar graph displays the number of payments by cash, credit card, and debit card for all three age groups. We found that Gen Z makes the least payments, while Boomers make the most. This is likely due to Boomers having higher disposable income and more financial stability which allows them to make more purchases, compared to Gen Z likely having lower earnings than older generations, as well as them potentially relying more on digital payment methods, such as Venmo or Paypal. In terms of payment method, the results fairly line up with what we expected, where the total number of card payments (debit and credit card payments combined) far exceeds the number of cash payments. This is likely due to technology being such a prominent factor now. Cards have become more convenient, and cash has become an outdated and inconvenient method of payment.</p>
+  <p>This graph also contains an interactive hover feature to provide more quantitative context. It displays the payment method, age group, and number of payments for each bar.</p>
+
     <h3>Map Showing Which Age Group Spends the Most Per State</h3>
         
     <div class = 'center'>
@@ -143,30 +191,8 @@
         overall state spending. 
     </p>
 
-    <title>Shopping Trends by Generation</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="d3_graph.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .chart-container {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .chart-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        #chart3 {
-            width: 800px;
-            height: 500px;
-        }
-    </style>
+    <h3>Shopping Trends by Generation</h3>
+    
 
     <h3>Summary and Future Additions</h3>
     <p>[AJ thoughts - maybe something about comparing population to spending or states with large cities
