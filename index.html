@@ -46,11 +46,17 @@
       As we are all considered Gen Z, their <a href="https://onesearch.library.northeastern.edu/permalink/01NEU_INST/87npqb/cdi_proquest_journals_3118582627">decision-making style</a> was another point of curiosity to understand shopping behaviors between various generations.
       Through a data science project focusing on consumer behavior, e-commerce, and shopping habits, our group can use exploratory data analysis to evaluate various hypotheses related to this topic.</p>
 
-    <h3>Data Introduction</h3>
+    <h4>Tasks</h4>
+    <p>We will analyze shopping trends at three different levels—high, medium, and low—to gain a comprehensive understanding of consumer behavior. At the high level, we will examine broad distribution patterns across various demographics and time periods. This includes identifying overall spending trends by state and seasonality, which can highlight regional differences and peak shopping periods. Visualizations such as interactive bar charts, region maps, and line graphs can help illustrate how different groups engage in shopping activities over time.</p>
+    <p>Moving to the medium level, the focus shifts to more specific comparisons of shopping habits. One key analysis involves examining differences between regions of the U.S., particularly in terms of which items are most frequently purchased by category. Additionally, we will explore spending behaviors across different age groups, investigating whether younger or older shoppers tend to spend more on particular product categories. These comparisons can be visualized using stacked bar charts and distribution line charts to reveal significant patterns and differences.</p>
+    <p>At the low level, the analysis zooms in on a specific product category, such as footwear vs outerwear vs clothing, etc to investigate detailed purchasing behaviors. By using these detailed visualizations on both the generational patterns and shopping patterns, we can help retailers better understand their target audiences.</p>
+    <p>Overall, this project aims to provide a structured and visually engaging analysis of shopping trends, offering insights into consumer behavior across various dimensions. By leveraging data visualization techniques, we can effectively communicate findings that may be valuable for businesses, marketers, and economists studying retail patterns.</p>
 
-    <p>Our analysis makes use of a dataset called "shopping-trends.csv", which contains the following attributes 
+      <h3>Data Introduction</h3>
+
+    <p>Our analysis makes use of a dataset from <a href="https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset?select=shopping_trends.csv ">Kaggle</a> called "shopping-trends.csv", which contains the following attributes 
         across all 50 states. The data originally has 3900 rows with 19 columns. In order to conduct analysis on 
-        the data, we cleaned and added 3 columns to highlight certain information. This included creating "Region",
+        the data, we cleaned and added 3 more columns to highlight certain information. This included creating "Region",
         "Age Group", and "Winter Items" columns. The starred (*) attributes indicate data that was derived from 
         existing columns. The detailed information about the features are listed in the following table:</p>
 
@@ -173,7 +179,18 @@
   <p>This bar graph displays the number of payments by cash, credit card, and debit card for all three age groups. We found that Gen Z makes the least payments, while Boomers make the most. This is likely due to Boomers having higher disposable income and more financial stability which allows them to make more purchases, compared to Gen Z likely having lower earnings than older generations, as well as them potentially relying more on digital payment methods, such as Venmo or Paypal. In terms of payment method, the results fairly line up with what we expected, where the total number of card payments (debit and credit card payments combined) far exceeds the number of cash payments. This is likely due to technology being such a prominent factor now. Cards have become more convenient, and cash has become an outdated and inconvenient method of payment.</p>
   <p>This graph also contains an interactive hover feature to provide more quantitative context. It displays the payment method, age group, and number of payments for each bar.</p>
 
-    <h3>Map Showing Which Age Group Spends the Most Per State</h3>
+  <h3>Winter Shopping Across Regions and Seasons</h3>
+  <div class = 'center'>
+    <iframe src="clothes_regions_regions.html" width="80%" height="600px" frameborder="0"></iframe>
+</div>
+
+<p>This stacked bar chart shows the number of winter clothes purchased across all 4 regions and all 4 seasons. From this chart, we found that the Northwest region purchased the most amount of winter items, the Southeast purchased the second most, the Northeast purchased the third most, and the Southwest purchased the least. This partially aligns with our prediction, which was that the colder regions (Northwest and Northeast) tend to purchase the most number of winter items. While the Northwest region lined up with this prediction, we were surprised to see that the Northeast had significantly less purchases. Additionally, we found that each region purchases the most number of items in different seasons. The Northwest and Southeast purchased the most in the Spring with 99 and 98 items, respectively. On the other hand, the Northeast and Southwest purchased the most winter items in the Fall with 58 and 55, respectively. We initially expected the Fall and Winter seasons to be the most common, so a potential reason for the spring season to be popular may be due to leftover winter items in stock, leading to stores selling those items at a discount to generate more sales.</p>
+<p>This graph contains two interactive features. The first is a hover feature, which displays each bar color’s Region, Season, and Number of Winter Items Purchased, and this provides more detailed quantitative information for the user to gain more insight. The second feature is a dropdown menu, which allows the user to select a certain region to view specifically, while the other regions become greyed out. This helps the viewer focus in on any region that they may be especially interested in, and it makes the graph more visually appealing as well.</p>
+
+<h3>Top Shopping Categories Across Regions</h3>
+<p>[INSERT TIFFANY GRAPH HERE]</p>
+
+    <h3>Generation Spending Per State</h3>
         
     <div class = 'center'>
         <iframe src="purchases_per_state.html" width="80%" height="400px" frameborder="0"></iframe>
@@ -191,13 +208,31 @@
         overall state spending. 
     </p>
 
-    <h3>Shopping Trends by Generation</h3>
-    
+
 
     <h3>Summary and Future Additions</h3>
-    <p>[AJ thoughts - maybe something about comparing population to spending or states with large cities
-        or unemployment levels to spending (ex if more unemployed then maybe less spending)]</p>
-        
+    <h4>Takeaways</h4>
+    <ol>
+      <li>States with the largest metropolitan cities including Chicago, New York, and Los Angeles tend to have higher spending, reflecting the larger population within those states. Along with our data supporting the observation that states tend to have higher retail consumption levels, Boomers are often the highest spending consumers in those states.</li>
+        <ul>
+          <li>As the news often highlights Gen Z as a top shopping demographic, this data shows that Gen Z does not spend as much as other generations, likely attributed to the likelihood of less income due to being in the early stages of adulthood.</li>
+        </ul>
+      <li>Another finding was that shopping behaviors by type of item purchased (category) is not always the same across the United States. Our data showed that although most states purchase the most clothing because it is essential for our daily lives, there were 5 states (Nebraska, Kentucky, West Virginia, New Hampshire, and New Jersey) that actually purchased the most in accessories. </li>
+        <ul>
+          <li>This shows that shopping behavior is constantly changing and that companies should understand the “niche” behavior of certain regions to better cater their offerings and services.</li>
+          <li>Additionally, our stacked bar chart analyzing winter items through the diff regions also shows not all regions purchase these items in a similar frequency over the year, likely reflecting a mix of weather and income levels across the U.S.</li>
+        </ul>
+      <li>Lastly, our data showed that in terms of chosen payment method, Gen Z actually had cash, credit card, and debit card usage at relatively similar levels. Much of our news media likes to highlight that Gen Z is often associated with “unhealthy” spending and an inclination to use credit cards at a significantly higher rate compared to other chosen payment methods (cash and debt).</li>
+        <ul>
+          <li>However, our data showed that there are greater differences between credit card spending and cash for the Millennial and Boomer category. </li>
+          <li>This can help consumers better understand their comparison to generational payment method habits and help retail companies understand HOW their consumers tend to pay to promote accessibility and financial literacy.</li>
+        </ul>
+    </ol> 
+    <h4>Future Work</h4>
+    <p>To further improve our project, we can definitely find a dataset with exact dates instead of just seasons. This would allow us to broaden the time associated with our data, strengthening our findings and we can compare retail behavior on a year over year basis.</p>
+    <p>Additionally, we can find data that has additional payment methods beyond cash, credit card and debit card including buy now pay later options, as this is often a greater indicator of the country’s ongoing economic strength and whether the different generations utilize BNPL at higher rates than others. As income levels significantly impact consumer spending abilities, factoring state income level into the correlation analysis would be cool! </p>
+    <p>Lastly, we can analyze the discount aspect of the data further to observe whether certain generations are likely to buy items at full price or a reduced value. </p>
+    <p>This project enabled us to learn more about generational differences in retail spending, consumer behavior, and regional differences in shopping patterns!</p>
 </body>
 
 
