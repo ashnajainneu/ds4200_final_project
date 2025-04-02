@@ -29,6 +29,24 @@
             width: 800px;
             height: 500px;
         }
+        .legend-box {
+            border: 1px solid #333;
+            padding: 10px;
+            width: 150px;
+            background-color: #ece9dbea;
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .color-box {
+            width: 10px;
+            height: 10px;
+            margin-right: 10px;
+            border: 1px solid #000;
+        }
     </style>
 
 
@@ -188,7 +206,31 @@
 <p>This graph contains two interactive features. The first is a hover feature, which displays each bar color’s Region, Season, and Number of Winter Items Purchased, and this provides more detailed quantitative information for the user to gain more insight. The second feature is a dropdown menu, which allows the user to select a certain region to view specifically, while the other regions become greyed out. This helps the viewer focus in on any region that they may be especially interested in, and it makes the graph more visually appealing as well.</p>
 
 <h3>Top Shopping Categories Across Regions</h3>
-<p>[INSERT TIFFANY GRAPH HERE]</p>
+<div class = 'center'>
+  <iframe src="state_shopping_category.html" width="80%" height="500px" frameborder="0"></iframe>
+</div>
+<div class="legend-box">
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #E6E6FA;"></div>
+      <span>Clothing</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #fc8d59;"></div>
+      <span>Footwear</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #fdcc8a;"></div>
+      <span>Outerwear</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #d7301f;"></div>
+      <span>Accessories</span>
+  </div>
+</div>
+
+<p>From the above chart, we can see the U.S. chart displaying the shopping data from our dataset through the frequency of each shopping category purchased in that state including outerwear, footwear, accessories, or clothing. Each of the 4 categories is assigned a color, and the category with the highest frequency is highlighted that color in our map, as this can show variances in shopping frequency around the U.S.</p>
+<p>As most of the states are colored a light lavender, it shows that the highest category for shopping is clothing, while a few states (5) have accessories as their highest category. This is especially interesting, because these states with accessories as the “highest category” are located in the middle of North America and the East coast, where there tends to be colder weather.</p>
+<p>Users can navigate through the interactive map and click through the states to compare the category distribution between each.</p>
 
     <h3>Generation Spending Per State</h3>
         
