@@ -1,5 +1,5 @@
 body {
-    width: 1000px;
+    height: 100%;
     margin: 0 auto;
     padding: 0 20px 20px 20px;
     border: 3px solid black;
@@ -34,8 +34,56 @@ body {
     word-break: normal;
 }
 
-.center {
+/* .center {
     margin: 0 auto;
     display: flex;
     justify-content: center;
+} */
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* This is Tiffany's code */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.chart-container {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex; /*AJ addition*/
+    align-items: center; /*AJ addition*/
+    flex-direction: column; /*AJ addition*/
+}
+.chart-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#chart3 {
+    width: 800px;
+    height: 500px;
+}
+.legend-box {
+    border: 1px solid #333;
+    padding: 10px;
+    width: 150px;
+    background-color: #ece9dbea;
+    margin-top: 20px;
+}
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.color-box {
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border: 1px solid #000;
 }

@@ -10,7 +10,11 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="d3_graph.js"></script>
     <style>
-        body {
+      p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        /* body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
@@ -46,7 +50,12 @@
             height: 10px;
             margin-right: 10px;
             border: 1px solid #000;
-        }
+        } */
+        /* .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } */
     </style>
 
 
@@ -75,111 +84,185 @@
     <p>Our analysis makes use of a dataset from <a href="https://www.kaggle.com/datasets/zeesolver/consumer-behavior-and-shopping-habits-dataset?select=shopping_trends.csv ">Kaggle</a> called "shopping-trends.csv", which contains the following attributes 
         across all 50 states. The data originally has 3900 rows with 19 columns. In order to conduct analysis on 
         the data, we cleaned and added 3 more columns to highlight certain information. This included creating "Region",
-        "Age Group", and "Winter Items" columns. The starred (*) attributes indicate data that was derived from 
-        existing columns. The detailed information about the features are listed in the following table:</p>
+        "Age Group", and "Winter Items" columns. For the different age groups, Generation Z consists of people 27 and under,
+        Millennials are 28-43, and Boomers are 44 and older.  The detailed information about the features are listed in the following table:</p>
 
         <div class="center">
             <table class="tg">
                 <thead>
                   <tr>
+                    <th class="tg-0lax">Level</th>
                     <th class="tg-0lax">Variable Name</th>
                     <th class="tg-0lax">Details</th>
+                    <th class="tg-0lax">Information</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <td class="tg-0lax">Customer Info</td>
                     <td class="tg-0lax">Customer ID</td>
                     <td class="tg-0lax">Customer number</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Customer Info</td>
                     <td class="tg-0lax">Age</td>
                     <td class="tg-0lax">Customer's age</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Customer Info</td>
                     <td class="tg-0lax">Gender</td>
                     <td class="tg-0lax">Customer's gender</td>
+                    <td>Male | Female</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Item Purchased</td>
-                    <td class="tg-0lax">The specific item purchased</td>
+                    <td class="tg-0lax">The specific item purchased </td>
+                      <td>Blouse | Sweater | Jeans | Sandals | Sneakers | Shirt| 
+                        Shorts | Coat | Handbag | Shoes | Dress | Skirt | Sunglasses | Pants | Jacket | Hoodie | Jewelry | T-shirt | 
+                        Scarf | Hat | Socks | Backpack | Belt | Boots | Gloves</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Category</td>
                     <td class="tg-0lax">The clothing category for the item purchased</td>
+                    <td>Clothing | Footwear | Outerwear | Accessories</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Purchase Amount (USD)</td>
                     <td class="tg-0lax">The total amount of the order</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Location and Timing</td>
                     <td class="tg-0lax">Location</td>
                     <td class="tg-0lax">The state the order was purchased in</td>
+                    <td>All 50 States</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Size</td>
-                    <td class="tg-0lax">The size of the clothing item ordered</td>
+                    <td class="tg-0lax">The size of the clothing item ordered </td>
+                    <td>S | M | L | XL</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Color</td>
                     <td class="tg-0lax">The color of the item purchased</td>
+                      <td>Gray | Maroon | Turquoise | White | Charcoal | Silver | 
+                        Pink | Purple | Olive | Gold | Violet | Teal | Lavendar | Black | Green | Peach | Red | Cyan | Brown | 
+                        Beige | Orange | Indigo | Yellow | Magenta | Blue</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Location and Timing</td>
                     <td class="tg-0lax">Season</td>
                     <td class="tg-0lax">The season the item correlates with</td>
+                    <td>Winter | Spring | Summer | Fall</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Review Rating</td>
                     <td class="tg-0lax">The customer's rating for the item</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Customer Info</td>
                     <td class="tg-0lax">Subscription Status</td>
-                    <td class="tg-0lax">If the customer is subscribed to the service or not</td>
+                    <td class="tg-0lax">If the customer is subscribed to the service or not </td>
+                    <td>Yes | No</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Payment and Shipping</td>
                     <td class="tg-0lax">Payment Method</td>
                     <td class="tg-0lax">How the order was payed for</td>
+                    <td>Credit card | Bank tranfer | Cash | PayPal | Venmo | Debit Card</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Payment and Shipping</td>
                     <td class="tg-0lax">Shipping Type</td>
                     <td class="tg-0lax">How the order was shipped</td>
+                    <td>Express | Free Shipping | Next Day Air | Standard | 2-day Shipping | Store Pickup</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Payment and Shipping</td>
                     <td class="tg-0lax">Discount Applied</td>
                     <td class="tg-0lax">If a discount was applied to the order or not</td>
+                    <td>Yes | No</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Payment and Shipping</td>
                     <td class="tg-0lax">Promo Code Used</td>
                     <td class="tg-0lax">If a promo code was applied to the order or not</td>
+                    <td>Yes | No</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase History</td>
                     <td class="tg-0lax">Previous Purchases</td>
                     <td class="tg-0lax">The number of previous purchases by the customer</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Payment and Shipping</td>
                     <td class="tg-0lax">Preferred Payment Method</td>
                     <td class="tg-0lax">The customer's preferred payment method</td>
+                    <td>Credit card | Bank tranfer | Cash | PayPal | Venmo | Debit Card</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase History</td>
                     <td class="tg-0lax">Frequency of Purchases</td>
                     <td class="tg-0lax">How often the customer places orders</td>
+                    <td>---</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Location and Timing</td>
                     <td class="tg-0lax">Region*</td>
                     <td class="tg-0lax">Grouped into 4 main regions of the US based on the "Location" column</td>
+                    <td>Northeast | Southeast | Southwest | Northwest</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Customer Info</td>
                     <td class="tg-0lax">Age Group*</td>
                     <td class="tg-0lax">Grouped into 3 main generations from the "Age" column</td>
+                    <td>Gen Z | Millennial | Boomer</td>
                   </tr>
                   <tr>
+                    <td class="tg-0lax">Purchase Info</td>
                     <td class="tg-0lax">Winter Items*</td>
                     <td class="tg-0lax">Identies if the item is a winter item or not based on the "Item Purchased" column</td>
+                    <td>Winter Item | Other</td>
                   </tr>
                 </tbody>
                 </table>
             </div>
+            <p class="center">The starred (*) attributes indicate data that was derived from 
+              existing columns.</p>
 
-    <h3>Generations' Shopping Volume Through Seasons</h3>
+              <h3>Generation Spending Per State</h3>
+        
+              <!-- <div class = 'center'> -->
+                <div class="chart-container">
+                  <iframe src="purchases_per_state.html" width="80%" height="550px" frameborder="0"></iframe>
+              </div>
+              
+              <p>
+                  <br> The map above shows the total amount spent per state. The darker the color, the more 
+                  shopping occurs in that state compared to others. The map is interactive, so you can hover over each state to 
+                  see more information. When you hover over the box, the "Age Group" shown is the generation that spends the most
+                  in that state. A quick look at the graph shows that Montana is the darkest colored state, and therefore,
+                  has the highest spending at $5,784 and Boomers (ages 44+) are the highest spenders by age, spending 56.45% of the
+                  entire state's purchases. Kansas is the state with the lowest spending at only $3,437, with Boomers once again
+                  spending the most at 48.3%. The states with the largest cities (i.e. Chicago, New York, Los Angeles) are more lightly
+                  colored, so there could be a possible correlation between large cities and higher population and it's effect on 
+                  overall state spending. 
+              </p>
+          
+   
+   
+   
+              <h3>Generations' Shopping Volume Through Seasons</h3>
     <div class="chart-container">
               <div class="chart-title">Chart of Shopping Volume by Generation Across Seasons</div>
               <div id="chart3"></div>
@@ -198,8 +281,12 @@
   <p>This graph also contains an interactive hover feature to provide more quantitative context. It displays the payment method, age group, and number of payments for each bar.</p>
 
   <h3>Winter Shopping Across Regions and Seasons</h3>
-  <div class = 'center'>
+  <!-- <div class = 'center'>
     <iframe src="clothes_regions_regions.html" width="80%" height="600px" frameborder="0"></iframe>
+</div> -->
+
+<div class="chart-container">
+  <iframe src="clothes_regions_regions.html" width="80%" height="600px" frameborder="0"></iframe>
 </div>
 
 <p>This stacked bar chart shows the number of winter clothes purchased across all 4 regions and all 4 seasons. From this chart, we found that the Northwest region purchased the most amount of winter items, the Southeast purchased the second most, the Northeast purchased the third most, and the Southwest purchased the least. This partially aligns with our prediction, which was that the colder regions (Northwest and Northeast) tend to purchase the most number of winter items. While the Northwest region lined up with this prediction, we were surprised to see that the Northeast had significantly less purchases. Additionally, we found that each region purchases the most number of items in different seasons. The Northwest and Southeast purchased the most in the Spring with 99 and 98 items, respectively. On the other hand, the Northeast and Southwest purchased the most winter items in the Fall with 58 and 55, respectively. We initially expected the Fall and Winter seasons to be the most common, so a potential reason for the spring season to be popular may be due to leftover winter items in stock, leading to stores selling those items at a discount to generate more sales.</p>
@@ -231,26 +318,6 @@
 <p>From the above chart, we can see the U.S. chart displaying the shopping data from our dataset through the frequency of each shopping category purchased in that state including outerwear, footwear, accessories, or clothing. Each of the 4 categories is assigned a color, and the category with the highest frequency is highlighted that color in our map, as this can show variances in shopping frequency around the U.S.</p>
 <p>As most of the states are colored a light lavender, it shows that the highest category for shopping is clothing, while a few states (5) have accessories as their highest category. This is especially interesting, because these states with accessories as the “highest category” are located in the middle of North America and the East coast, where there tends to be colder weather.</p>
 <p>Users can navigate through the interactive map and click through the states to compare the category distribution between each.</p>
-
-    <h3>Generation Spending Per State</h3>
-        
-    <div class = 'center'>
-        <iframe src="purchases_per_state.html" width="80%" height="400px" frameborder="0"></iframe>
-    </div>
-    
-    <p>
-        <br> The map above shows the total amount spent per state. The lighter the color, the more 
-        shopping occurs in that state compared to others. The map is interactive, so you can hover over each state to 
-        see more information. When you hover over the box, the "Age Group" shown is the generation that spends the most
-        in that state. A quick look at the graph shows that Montana is the lightest colored state, and therefore,
-        has the highest spending at $5,784 and Boomers (ages 44+) are the highest spenders by age, spending 56.45% of the
-        entire state's purchases. Kansas is the state with the lowest spending at only $3,437, with Boomers once again
-        spending the most at 48.3%. The states with the largest cities (i.e. Chicago, New York, Los Angeles) are more lightly
-        colored, so there could be a possible correlation between large cities and higher population and it's effect on 
-        overall state spending. 
-    </p>
-
-
 
     <h3>Summary and Future Additions</h3>
     <h4>Takeaways</h4>
