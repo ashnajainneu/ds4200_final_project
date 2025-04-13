@@ -273,9 +273,9 @@
     <p>As many assume that certain seasons will have large influxes of purchasing, the trend from this data of purchasing amount seems to be relatively stable. Additionally, there does not seem to be any outliers or significant spikes. Gen Z may purchase at a much lower amount in this chart due to the likelihood of less disposable income to spend being at the early years of their adulthood. </p>
 
 
-    <h3>Payments by Age Group</h3>
+    <h3>Credit Card Payments and Discounts Across Age Groups</h3>
     <div class = 'center'>
-      <iframe src="payment_methods_by_age.html" width="80%" height="400px" frameborder="0"></iframe>
+      <iframe src="treemap_chart.html" width="80%" height="400px" frameborder="0"></iframe>
   </div>
   <p>This bar graph displays the number of payments by cash, credit card, and debit card for all three age groups. We found that Gen Z makes the least payments, while Boomers make the most. This is likely due to Boomers having higher disposable income and more financial stability which allows them to make more purchases, compared to Gen Z likely having lower earnings than older generations, as well as them potentially relying more on digital payment methods, such as Venmo or Paypal. In terms of payment method, the results fairly line up with what we expected, where the total number of card payments (debit and credit card payments combined) far exceeds the number of cash payments. This is likely due to technology being such a prominent factor now. Cards have become more convenient, and cash has become an outdated and inconvenient method of payment.</p>
   <p>This graph also contains an interactive hover feature to provide more quantitative context. It displays the payment method, age group, and number of payments for each bar.</p>
@@ -286,38 +286,65 @@
 </div> -->
 
 <div class="chart-container">
-  <iframe src="clothes_regions_regions.html" width="80%" height="600px" frameborder="0"></iframe>
+  <iframe src="clothes_regions_seasons_updated.html" width="80%" height="1000px" frameborder="0"></iframe>
 </div>
 
 <p>This stacked bar chart shows the number of winter clothes purchased across all 4 regions and all 4 seasons. From this chart, we found that the Northwest region purchased the most amount of winter items, the Southeast purchased the second most, the Northeast purchased the third most, and the Southwest purchased the least. This partially aligns with our prediction, which was that the colder regions (Northwest and Northeast) tend to purchase the most number of winter items. While the Northwest region lined up with this prediction, we were surprised to see that the Northeast had significantly less purchases. Additionally, we found that each region purchases the most number of items in different seasons. The Northwest and Southeast purchased the most in the Spring with 99 and 98 items, respectively. On the other hand, the Northeast and Southwest purchased the most winter items in the Fall with 58 and 55, respectively. We initially expected the Fall and Winter seasons to be the most common, so a potential reason for the spring season to be popular may be due to leftover winter items in stock, leading to stores selling those items at a discount to generate more sales.</p>
 <p>This graph contains two interactive features. The first is a hover feature, which displays each bar color’s Region, Season, and Number of Winter Items Purchased, and this provides more detailed quantitative information for the user to gain more insight. The second feature is a dropdown menu, which allows the user to select a certain region to view specifically, while the other regions become greyed out. This helps the viewer focus in on any region that they may be especially interested in, and it makes the graph more visually appealing as well.</p>
 
-<h3>Top Shopping Categories Across Regions</h3>
+<h3>Shopping Categories and Payment Methods Across Regions</h3>
 <div class = 'center'>
-  <iframe src="state_shopping_category.html" width="80%" height="500px" frameborder="0"></iframe>
+  <iframe src="interactive_pay_category.html" width="80%" height="500px" frameborder="0"></iframe>
 </div>
 <div class="legend-box">
   <div class="legend-item">
-      <div class="color-box" style="background-color: #E6E6FA;"></div>
+      <div class="color-box" style="background-color: #bdd7e7;"></div>
       <span>Clothing</span>
   </div>
   <div class="legend-item">
-      <div class="color-box" style="background-color: #fc8d59;"></div>
+      <div class="color-box" style="background-color: #6baed6;"></div>
       <span>Footwear</span>
   </div>
   <div class="legend-item">
-      <div class="color-box" style="background-color: #fdcc8a;"></div>
+      <div class="color-box" style="background-color: #2171b5;"></div>
       <span>Outerwear</span>
   </div>
   <div class="legend-item">
-      <div class="color-box" style="background-color: #d7301f;"></div>
+      <div class="color-box" style="background-color: blue;"></div>
       <span>Accessories</span>
+  </div>
+</div>
+<div class="legend-box">
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #006d2c;"></div>
+      <span>Cash</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #31a354"></div>
+      <span>Credit Card</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #74c476;"></div>
+      <span>Debit Card</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #a1d99b;"></div>
+      <span>Paypal</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: #c7e9c0;"></div>
+      <span>Venmo</span>
+  </div>
+  <div class="legend-item">
+      <div class="color-box" style="background-color: green;"></div>
+      <span>Bank Transfer</span>
   </div>
 </div>
 
 <p>From the above chart, we can see the U.S. chart displaying the shopping data from our dataset through the frequency of each shopping category purchased in that state including outerwear, footwear, accessories, or clothing. Each of the 4 categories is assigned a color, and the category with the highest frequency is highlighted that color in our map, as this can show variances in shopping frequency around the U.S.</p>
-<p>As most of the states are colored a light lavender, it shows that the highest category for shopping is clothing, while a few states (5) have accessories as their highest category. This is especially interesting, because these states with accessories as the “highest category” are located in the middle of North America and the East coast, where there tends to be colder weather.</p>
-<p>Users can navigate through the interactive map and click through the states to compare the category distribution between each.</p>
+<p>As most of the states are colored a light blue, it shows that the highest category for shopping is clothing, while a few states (5) have accessories as their highest category. This is especially interesting, because these states with accessories as the “highest category” are located in the middle of North America and the East coast, where there tends to be colder weather.</p>
+<p>Additionally, users can navigate through the payment layer and explore the various frequencies of payment methods for state. As the options include credit card, debit, cash, bank transfer, venmo, and PayPal, the hues of the legend correlate to the top frequency of payment category for that state. Users can analyze the regional differences in payment habits and explore what payment type is preferred depending on area and expected financial literacy rates by state.</p>
+<p>Users can navigate through the interactive map and click through the states to compare the category distribution between each with multiple layers.</p>
 
     <h3>Summary and Future Additions</h3>
     <h4>Takeaways</h4>
@@ -340,7 +367,6 @@
     <h4>Future Work</h4>
     <p>To further improve our project, we can definitely find a dataset with exact dates instead of just seasons. This would allow us to broaden the time associated with our data, strengthening our findings and we can compare retail behavior on a year over year basis.</p>
     <p>Additionally, we can find data that has additional payment methods such as buy now pay later options, as this is often a greater indicator of the country’s ongoing economic strength and whether the different generations utilize BNPL at higher rates than others. As income levels significantly impact consumer spending abilities, factoring state income level into the correlation analysis would be cool! </p>
-    <p>Lastly, we can analyze the discount aspect of the data further to observe whether certain generations are likely to buy items at full price or a reduced value. </p>
     <p>This project enabled us to learn more about generational differences in retail spending, consumer behavior, and regional differences in shopping patterns!</p>
 </body>
 
